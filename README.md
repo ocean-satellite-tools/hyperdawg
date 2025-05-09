@@ -2,9 +2,7 @@
 
 You can work with the notebooks (.ipynb) in the JupyterHub.
 
-We have 2 JupyterHubs.
-* https://noaa.nmfs-openscapes.2i2c.cloud/ You can log into this one with your NOAA CAC but it has no persistent files.
-* https://nmfs-openscapes.2i2c.cloud/ This one has a persistent user directory. Use this if you are using the hub regularly and want your files to stay around. [Request Access (NOAA only)](https://docs.google.com/forms/d/e/1FAIpQLSfa2V3xmZnLaQJULSamAEdkhqSMWKwYWU7il5QXrBWVKkYNFA/viewform)
+https://nmfs-openscapes.2i2c.cloud/ This one has a persistent user directory. [Request Access (NOAA only)](https://docs.google.com/forms/d/e/1FAIpQLSfa2V3xmZnLaQJULSamAEdkhqSMWKwYWU7il5QXrBWVKkYNFA/viewform). You will need a GitHub username. You will get an invite via email from 'nmfs-openscapes'. Accept that to get access to the hub.
 
 1. Go to [https://nmfs-openscapes.2i2c.cloud/](https://nmfs-openscapes.2i2c.cloud/)
 2. Login with your GitHub account
