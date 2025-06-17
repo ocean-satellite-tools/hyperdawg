@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Geminate fish light project.kmz</name>
+	<Schema name="HAAk primo tentativo localities coordinates" id="S_HAAk_primo_tentativo_localities_coordinates_SDD">
+		<SimpleField type="string" name="LOC"><displayName>&lt;b&gt;LOC&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="LON"><displayName>&lt;b&gt;LON&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="LAT"><displayName>&lt;b&gt;LAT&lt;/b&gt;</displayName>
+</SimpleField>
+	</Schema>
+	<StyleMap id="msn_placemark_circle">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_placemark_circle0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+			<scale>1.8</scale>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight0">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+			<scale>1.8</scale>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+	</Style>
+	<Style id="sn_placemark_circle">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+			<scale>1.8</scale>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+	</Style>
+	<Style id="sn_placemark_circle0">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff0000ff</color>
+			<scale>1.8</scale>
+		</LabelStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+	</Style>
+	<Folder>
+		<name>Geminate fish light project</name>
+		<open>1</open>
+		<Folder>
+			<name>Caribbean</name>
+			<open>1</open>
+			<Placemark>
+				<name>Providencia</name>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Providencia</SimpleData>
+						<SimpleData name="LON">-81.3416</SimpleData>
+						<SimpleData name="LAT">13.3855</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-81.341611,13.385472,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Curacao</name>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Curacao</SimpleData>
+						<SimpleData name="LON">-69.1738</SimpleData>
+						<SimpleData name="LAT">12.3416</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-69.173778,12.34155599999999,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Blanquilla (Venezuela)</name>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Blanquilla</SimpleData>
+						<SimpleData name="LON">-64.6265</SimpleData>
+						<SimpleData name="LAT">11.9023</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-64.62647200000001,11.90227800000002,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Belize old Haak</name>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Belize</SimpleData>
+						<SimpleData name="LON">-87.5318</SimpleData>
+						<SimpleData name="LAT">17.3319</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-87.53175,17.331944,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Belize NEW</name>
+				<LookAt>
+					<longitude>-87.52162725965417</longitude>
+					<latitude>17.29119755039135</latitude>
+					<altitude>0</altitude>
+					<heading>0.06166866751940583</heading>
+					<tilt>0</tilt>
+					<range>176911.3068423747</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-87.69158402720024,17.34498263332587,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Parguera, Puerto Rico NEW</name>
+				<description><![CDATA[<img style="max-width:500px;" src="files/Map-of-La-Parguera-showing-the-relative-location-of-the-six-reefs-sampled-from-2003-to.png">]]></description>
+				<LookAt>
+					<longitude>-66.98992613681961</longitude>
+					<latitude>17.94047788458037</latitude>
+					<altitude>0</altitude>
+					<heading>3.841193069636726</heading>
+					<tilt>4.787545685343295</tilt>
+					<range>31750.6527913127</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-66.99238055555556,17.90024722222222,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Navassa Island reefs NEW</name>
+				<description><![CDATA[<img style="max-width:500px;" src="files/Navassa Island reefs.png">]]></description>
+				<LookAt>
+					<longitude>-75.02445561024727</longitude>
+					<latitude>18.40104035736281</latitude>
+					<altitude>0</altitude>
+					<heading>-0.003210417174066049</heading>
+					<tilt>0</tilt>
+					<range>3966.618103530801</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-75.02908055555555,18.39771388888889,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Tropical Eastern Pacific</name>
+			<Placemark>
+				<name>Perlas OLD Haak TO DELETE</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Perlas</SimpleData>
+						<SimpleData name="LON">-79.0209</SimpleData>
+						<SimpleData name="LAT">8.62308</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-79.020917,8.623083000000008,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bona (Las Perlas) old Haak DELETE</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Bona</SimpleData>
+						<SimpleData name="LON">-79.0957</SimpleData>
+						<SimpleData name="LAT">8.19722</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-79.09569399999999,8.197222000000007,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Isla Saboga (Las Perlas)</name>
+				<LookAt>
+					<longitude>-79.05882667751729</longitude>
+					<latitude>8.611428264741853</latitude>
+					<altitude>0</altitude>
+					<heading>0.0007256949003280088</heading>
+					<tilt>8.870893695365002</tilt>
+					<range>780.6539990964186</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-79.05816944444445,8.610772222222222,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Isla Taboga</name>
+				<styleUrl>#msn_placemark_circle</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_HAAk_primo_tentativo_localities_coordinates_SDD">
+						<SimpleData name="LOC">Taboga</SimpleData>
+						<SimpleData name="LON">-79.5499</SimpleData>
+						<SimpleData name="LAT">8.76517</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-79.54991699999999,8.765166999999977,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Achotines</name>
+				<LookAt>
+					<longitude>-80.16193579327371</longitude>
+					<latitude>7.409987053060751</latitude>
+					<altitude>0</altitude>
+					<heading>0.1565627844376923</heading>
+					<tilt>0</tilt>
+					<range>3967.726391226152</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-80.15665,7.411905555555556,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tebada</name>
+				<description>Zapata, F. A., &amp; Vargas-Ángel, B. (2003). Corals and coral reefs of the Pacific coast of Colombia. In Latin American coral reefs (pp. 419-447). Elsevier Science.</description>
+				<LookAt>
+					<longitude>-77.36232371638809</longitude>
+					<latitude>6.500308103885653</latitude>
+					<altitude>0</altitude>
+					<heading>0.2336218770646676</heading>
+					<tilt>0</tilt>
+					<range>6850.81252428702</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-77.36097777777778,6.497541666666666,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Isla Gorgona, La Azufrada reef</name>
+				<description>Zapata, F. A., &amp; Vargas-Ángel, B. (2003). Corals and coral reefs of the Pacific coast of Colombia. In Latin American coral reefs (pp. 419-447). Elsevier Science.</description>
+				<LookAt>
+					<longitude>-78.17593374598736</longitude>
+					<latitude>2.953841511347833</latitude>
+					<altitude>0</altitude>
+					<heading>3.002945302106393e-07</heading>
+					<tilt>0</tilt>
+					<range>3317.520528575687</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-78.17490833333333,2.953333333333334,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bahia Culebra, Golfo de Papagayo</name>
+				<description><![CDATA[<img style="max-width:500px;" src="files/Papagayo dive sites.png">]]></description>
+				<LookAt>
+					<longitude>-85.7130475641486</longitude>
+					<latitude>10.583865889879</latitude>
+					<altitude>0</altitude>
+					<heading>0.06336531884876871</heading>
+					<tilt>0</tilt>
+					<range>5540.5696952116</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-85.71094166666667,10.58579166666667,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201"></atom:link>
+	</Folder>
+</Document>
+</kml>
