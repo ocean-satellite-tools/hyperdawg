@@ -1,6 +1,6 @@
 # hyperdawg
 
-You can work with the notebooks (.ipynb) in the JupyterHub.
+You can work with the notebooks (.ipynb) in the NMFS JupyterHub.
 
 https://nmfs-openscapes.2i2c.cloud/ This one has a persistent user directory. [Request Access (NOAA only)](https://docs.google.com/forms/d/e/1FAIpQLSfa2V3xmZnLaQJULSamAEdkhqSMWKwYWU7il5QXrBWVKkYNFA/viewform). You will need a GitHub username. You will get an invite via email from 'nmfs-openscapes'. Accept that to get access to the hub.
 
