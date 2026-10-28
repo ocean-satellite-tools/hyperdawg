@@ -1,12 +1,4 @@
-"""Interactive Jupyter viewer for ecosystem_dashboard.py.
-
-Run after loading the model data in your notebook:
-    import ecosystem_dashboard as dash
-    import ecosystem_viewer as viewer
-    dash.configure(data=data, sst=sst, chl=chl, meow=meow,
-                   alpha=alpha, TE=TE, wet_weight=wet_weight)
-    viewer.launch(region_name='Natal', map_variable='Catch', zoom=0.70)
-"""
+"""Interactive Jupyter viewer for ecosystem_dashboard.py."""
 
 import io
 import base64
@@ -30,7 +22,7 @@ MAP_VARIABLES = [
 
 
 def launch(region_name='Natal', map_variable='Catch', zoom=0.70):
-    """Show MEOW, variable, and zoom controls above a nine-card dashboard and map."""
+    """Show MEOW, map variable, and zoom controls above the dashboard and map."""
     regions = dash.available_regions()
     region_select = widgets.Dropdown(options=regions, value=region_name, description='MEOW:')
     variable_select = widgets.Dropdown(options=MAP_VARIABLES, value=map_variable, description='Map:')
@@ -49,14 +41,46 @@ def launch(region_name='Natal', map_variable='Catch', zoom=0.70):
                 plt.close(fig)
 
         map_image = base64.b64encode(image.getvalue()).decode('ascii')
+
         html = f'''
-        <div style="display:flex;align-items:flex-start;gap:20px;width:100%;max-width:1700px">
-            <div style="flex:1.2;min-width:0">{dashboard}</div>
-            <div style="flex:1.05;min-width:0">
-                <img src="data:image/png;base64,{map_image}" style="width:100%;height:auto">
+        <style>
+            .p2f-viewer {{
+                width: 100%;
+                max-width: 1700px;
+                min-width: 0;
+                container-type: inline-size;
+            }}
+            .p2f-layout {{
+                display: grid;
+                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.05fr);
+                gap: 20px;
+                align-items: start;
+            }}
+            .p2f-panel {{
+                min-width: 0;
+            }}
+            .p2f-map {{
+                display: block;
+                width: 100%;
+                height: auto;
+            }}
+            @container (max-width: 1100px) {{
+                .p2f-layout {{
+                    grid-template-columns: minmax(0, 1fr);
+                }}
+            }}
+        </style>
+
+        <div class="p2f-viewer">
+            <div class="p2f-layout">
+                <div class="p2f-panel">{dashboard}</div>
+                <div class="p2f-panel">
+                    <img class="p2f-map" src="data:image/png;base64,{map_image}">
+                </div>
             </div>
         </div>
         '''
+
         with output:
             clear_output(wait=True)
             display(HTML(html))
@@ -65,7 +89,9 @@ def launch(region_name='Natal', map_variable='Catch', zoom=0.70):
     variable_select.observe(update_view, names='value')
     zoom_select.observe(update_view, names='value')
 
+    # Original dropdown controls
     display(widgets.HBox([region_select, variable_select, zoom_select]))
     display(output)
     update_view()
+
     return region_select, variable_select, zoom_select
