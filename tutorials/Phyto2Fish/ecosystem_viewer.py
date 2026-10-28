@@ -42,41 +42,14 @@ def launch(region_name='Natal', map_variable='Catch', zoom=0.70):
 
         map_image = base64.b64encode(image.getvalue()).decode('ascii')
 
+        # Keep dashboard on the left and map on the right
         html = f'''
-        <style>
-            .p2f-viewer {{
-                width: 100%;
-                max-width: 1700px;
-                min-width: 0;
-                container-type: inline-size;
-            }}
-            .p2f-layout {{
-                display: grid;
-                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.05fr);
-                gap: 20px;
-                align-items: start;
-            }}
-            .p2f-panel {{
-                min-width: 0;
-            }}
-            .p2f-map {{
-                display: block;
-                width: 100%;
-                height: auto;
-            }}
-            @container (max-width: 1100px) {{
-                .p2f-layout {{
-                    grid-template-columns: minmax(0, 1fr);
-                }}
-            }}
-        </style>
-
-        <div class="p2f-viewer">
-            <div class="p2f-layout">
-                <div class="p2f-panel">{dashboard}</div>
-                <div class="p2f-panel">
-                    <img class="p2f-map" src="data:image/png;base64,{map_image}">
-                </div>
+        <div style="display:flex; align-items:flex-start; gap:16px; width:100%; max-width:1700px">
+            <div style="flex:1.2; min-width:0">
+                {dashboard}
+            </div>
+            <div style="flex:1.05; min-width:0">
+                <img src="data:image/png;base64,{map_image}" style="width:100%; height:auto">
             </div>
         </div>
         '''
