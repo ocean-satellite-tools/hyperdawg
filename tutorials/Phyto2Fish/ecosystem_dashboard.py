@@ -31,7 +31,7 @@ def indicator(values, years, scale=1, fmt=",.1f"):
     arrow = ("↑" if fit.slope > 0 else "↓") if fit and fit.pvalue < 0.05 else "↔"
     color = "#c65c50" if arrow == "↑" else "#377caa" if arrow == "↓" else "#888888"
     sd = v.std(ddof=1) if len(v) > 1 else 0
-    return f'<span>{v.mean()/scale:{fmt}}</span><span class="p2f-sd">± {sd/scale:{fmt}}</span><span class="p2f-arrow" style="color:{color}">{arrow}</span>'
+    return f'<span style="white-space:nowrap">{v.mean()/scale:{fmt}}</span> <span style="color:#888;white-space:nowrap">± {sd/scale:{fmt}}</span> <span style="color:{color};font-size:20px;white-space:nowrap">{arrow}</span>'
 
 
 def trend_indicator(values, years, unit, fmt="+.3f"):
@@ -42,7 +42,7 @@ def trend_indicator(values, years, unit, fmt="+.3f"):
     fit = linregress(y, v)
     arrow = ("↑" if fit.slope > 0 else "↓") if fit.pvalue < 0.05 else "↔"
     color = "#c65c50" if arrow == "↑" else "#377caa" if arrow == "↓" else "#888888"
-    value = f'<span>{fit.slope*10:{fmt}}</span><span class="p2f-arrow" style="color:{color}">{arrow}</span>'
+    value = f'<span style="white-space:nowrap">{fit.slope*10:{fmt}}</span> <span style="color:{color};font-size:20px;white-space:nowrap">{arrow}</span>'
     return value, f'{unit}/decade'
 
 
@@ -72,103 +72,38 @@ def show_dashboard(region_name):
 
     cards = "".join(
         f'''
-        <div class="p2f-card">
-            <div class="p2f-label">{label}</div>
-            <div class="p2f-value">{value}</div>
-            <div class="p2f-unit">{unit}</div>
+        <div style="padding:12px; border:1px solid #ddd; border-radius:8px; background:#fafafa; min-width:0; box-sizing:border-box; display:flex; flex-direction:column">
+            <div style="font-size:12px; color:#777; font-weight:600; line-height:1.4; min-height:34px">
+                {label}
+            </div>
+            <div style="font-size:18px; font-weight:600; margin-top:8px; line-height:1.5; font-variant-numeric:tabular-nums">
+                {value}
+            </div>
+            <div style="font-size:12px; color:#888; margin-top:6px; line-height:1.4">
+                {unit}
+            </div>
         </div>
         '''
         for label, value, unit in metrics
     )
 
     return f'''
-    <style>
-        .p2f-dashboard {{
-            font-family: Arial, sans-serif;
-            width: 100%;
-            min-width: 0;
-            box-sizing: border-box;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            background: white;
-            color: #222;
-        }}
-        .p2f-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-            gap: 12px;
-        }}
-        .p2f-card {{
-            min-width: 0;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #fafafa;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }}
-        .p2f-label {{
-            font-size: 12px;
-            line-height: 1.4;
-            font-weight: 600;
-            letter-spacing: .3px;
-            color: #777;
-            min-height: 34px;
-        }}
-        .p2f-value {{
-            display: flex;
-            align-items: baseline;
-            flex-wrap: wrap;
-            column-gap: 5px;
-            row-gap: 0;
-            font-size: clamp(16px, 1.5vw, 21px);
-            font-weight: 600;
-            line-height: 1.3;
-            font-variant-numeric: tabular-nums;
-        }}
-        .p2f-value span {{
-            white-space: nowrap;
-        }}
-        .p2f-sd {{
-            color: #888;
-        }}
-        .p2f-arrow {{
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 1;
-        }}
-        .p2f-unit {{
-            font-size: 12px;
-            color: #888;
-            line-height: 1.4;
-            overflow-wrap: break-word;
-        }}
-        .p2f-note {{
-            font-size: 12px;
-            color: #888;
-            margin-top: 18px;
-            line-height: 1.5;
-        }}
-        .p2f-footnote {{
-            font-size: 11px;
-            color: #999;
-            margin-top: 6px;
-            line-height: 1.5;
-        }}
-    </style>
+    <div style="font-family:Arial,sans-serif; width:100%; box-sizing:border-box; padding:16px; border:1px solid #ddd; border-radius:12px; background:white; color:#222">
+        <div style="font-size:12px; color:#888; letter-spacing:1px">MARINE ECOSYSTEM PROFILE</div>
+        <div style="font-size:25px; font-weight:700; margin:5px 0 4px">{region_name}</div>
+        <div style="font-size:12px; color:#888; margin-bottom:20px">{int(region.year.min())}–{int(region.year.max())} | Mean ± SD (model period)</div>
 
-    <div class="p2f-dashboard">
-        <div style="font-size:12px;color:#888;letter-spacing:1px">MARINE ECOSYSTEM PROFILE</div>
-        <div style="font-size:27px;font-weight:700;margin:5px 0 4px">{region_name}</div>
-        <div style="font-size:13px;color:#888;margin-bottom:22px">{int(region.year.min())}–{int(region.year.max())} | Mean ± SD (model period)</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:10px">
+            {cards}
+        </div>
 
-        <div class="p2f-grid">{cards}</div>
-
-        <div class="p2f-note">↑ Significant increase &nbsp; ↓ Significant decrease &nbsp; ↔ No significant trend &nbsp; (p &lt; 0.05)</div>
-        <div class="p2f-footnote">SST and chlorophyll trends: 1998–2025. Other annual indicators: {int(region.year.min())}–{int(region.year.max())}. Fishing effort: mean monthly apparent fishing hours, 2012–2024. Percentile among MEOWs with available data.</div>
+        <div style="font-size:11px; color:#888; margin-top:18px">
+            ↑ Significant increase &nbsp; ↓ Significant decrease &nbsp; ↔ No significant trend &nbsp; (p &lt; 0.05)
+        </div>
+        <div style="font-size:10px; color:#999; margin-top:6px">
+            SST and chlorophyll trends: 1998–2025. Other annual indicators: {int(region.year.min())}–{int(region.year.max())}.
+            Fishing effort: mean monthly apparent fishing hours, 2012–2024. Percentile among MEOWs with available data.
+        </div>
     </div>
     '''
 
